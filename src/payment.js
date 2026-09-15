@@ -1,8 +1,10 @@
+const logger = require('./logger');
+
 const processPayment = () => {
-  console.log("payment");
-  // Simulate some payment processing
+  logger.info('Payment processing pipeline started');
+  // Simulate payment processing
   setTimeout(() => {
-    console.log("done");
+    logger.info('Payment processing completed successfully', { status: 'success' });
   }, 500);
 };
 
